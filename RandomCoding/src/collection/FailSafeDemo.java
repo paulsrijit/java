@@ -1,7 +1,6 @@
 package collection;
 
 import java.util.Iterator;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class FailSafeDemo {
