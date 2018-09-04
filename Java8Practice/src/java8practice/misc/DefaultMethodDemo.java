@@ -8,7 +8,7 @@ public class DefaultMethodDemo {
 		obj.newDefaultImpl2();
 		obj.oldContarct1();
 		
-		OldContarct obj2 = new NewImpl();
+		OldContarct obj2 = new NewImpl();//
 		obj2.newDefaultImpl2();
 	}
 
