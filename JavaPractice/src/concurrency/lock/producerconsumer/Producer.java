@@ -23,7 +23,7 @@ public class Producer extends ProducerConsumer {
 			System.out.println(Thread.currentThread().getName()+":: add "+value);
 			list.add(value++);
 			
-			condition.signal();
+			condition.signalAll();
 			Thread.sleep(1000);
 			
 			lock.unlock();

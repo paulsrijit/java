@@ -1,6 +1,6 @@
-package javapractice.basic.staticdemo;
+package javapractice.basic;
 
-public class StaticDemo {
+public class FinalDemo {
 
 	public static void main(String[] args) {
 		D d = new D();

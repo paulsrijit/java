@@ -10,11 +10,13 @@ public class ProducerConsumerMainSignalAll {
 
 		ArrayList<Integer> list = new ArrayList<>();
 		ReentrantLock lock = new ReentrantLock();
-		Condition condition = lock.newCondition();
+		/*Condition consumerQueue = lock.newCondition();
+		Condition producerQueue = lock.newCondition();*/
+		Condition blockingQueue = lock.newCondition();
 
-		Producer prod = new Producer(list, lock, condition);
-		Consumer cons1 = new Consumer(list, lock, condition);
-		Consumer cons2 = new Consumer(list, lock, condition);
+		Producer prod = new Producer(list, lock, blockingQueue);
+		Consumer cons1 = new Consumer(list, lock, blockingQueue);
+		Consumer cons2 = new Consumer(list, lock, blockingQueue);
 
 		Thread producer = new Thread(new Runnable() {
 

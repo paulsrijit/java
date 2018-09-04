@@ -16,12 +16,14 @@ public class Consumer extends ProducerConsumer {
 			
 			if(list.size() == 0) {
 				condition.await();
-			}
+			} else {
 			
 			int value = list.remove(0);
 			System.out.println(Thread.currentThread().getName()+":: remove "+value);
 			
-			condition.signal();
+			condition.signalAll();
+			
+			}
 			Thread.sleep(1000);
 			
 			lock.unlock();

@@ -6,9 +6,9 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class ProducerConsumer {
 	
-	List<Integer> list;
-	ReentrantLock lock;
-	Condition condition;
+	protected volatile List<Integer> list;
+	protected volatile ReentrantLock lock;
+	protected volatile Condition condition;
 	
 	public ProducerConsumer(List<Integer> list, ReentrantLock lock, Condition condition) {
 		super();
