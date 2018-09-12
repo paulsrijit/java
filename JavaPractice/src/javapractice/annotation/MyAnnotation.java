@@ -10,6 +10,9 @@ public @interface MyAnnotation {
 }
 
 class TestClass {
+	
+	//@MyAnnotation(antNm="Name_00", antVal=100)
+	@MyAnnotation
 	public void myfuntion() {
 		System.out.println("Hello from myfunction");
 	}
