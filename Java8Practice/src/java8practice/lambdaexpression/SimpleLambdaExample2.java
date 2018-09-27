@@ -13,6 +13,13 @@ public class SimpleLambdaExample2 {
 		};
 		
 		System.out.println(reverseStr.myStringFunction("Hello"));
+		
+		
+		MyString hw = (s) -> {
+			return s + " world!";
+		};
+		
+		System.out.println(hw.myStringFunction("Hello"));
 	}
 
 }
