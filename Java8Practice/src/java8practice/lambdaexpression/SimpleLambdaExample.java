@@ -20,6 +20,19 @@ public class SimpleLambdaExample {
 
 interface NumericTest {
 	int operate(int n);
+
+	@Override
+	int hashCode();
+
+	@Override
+	boolean equals(Object obj);
+
+//	Object clone() throws CloneNotSupportedException;
+
+	@Override
+	String toString();
+
+//	void finalize() throws Throwable;
 }
 
 interface StringOperation {
