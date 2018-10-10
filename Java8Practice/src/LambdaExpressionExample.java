@@ -10,7 +10,7 @@ public class LambdaExpressionExample {
 			}
 		};*/
 		
-		MyInterface obj = (int x, int y) -> (x+y);//--//--//
+		MyInterface obj = (int x, int y) -> (x+y);//--//--//--
 		System.out.println(obj.add(2, 3));
 	}
 
