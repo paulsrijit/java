@@ -1,7 +1,7 @@
 
 public class LambdaExpressionExample {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {//
 		/*MyInterface obj = new MyInterface() {
 			
 			@Override
