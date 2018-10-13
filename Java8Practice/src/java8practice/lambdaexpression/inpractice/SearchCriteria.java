@@ -4,35 +4,48 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Predicate;
 
+/**
+ *
+ * @author MikeW
+ */
 public class SearchCriteria {
-	private final Map<String, Predicate<Person>> predicateStore = new HashMap<>();
 
-	private void initPredicateStore() {
-		Predicate<Person> adultCriteria = person -> person.getAge() > 18;
-		Predicate<Person> studentCriteria = person -> person.getAge() <= 17;
-		Predicate<Person> middleAgedCriteria = person -> (person.getAge() >= 40) && (person.getAge() <= 50);
+  private final Map<String, Predicate<Person>> searchMap = new HashMap<>();
 
-		predicateStore.put("adultCriteria", adultCriteria);
-		predicateStore.put("studentCriteria", studentCriteria);
-		predicateStore.put("middleAgedCriteria", middleAgedCriteria);
-	}
+  SearchCriteria() {
+    super();
+    initSearchMap();
+  }
 
-	SearchCriteria() {
-		super();
-		initPredicateStore();
-	}
+  private void initSearchMap() {
+    Predicate<Person> adultCriteria = p -> p.getAge() >= 18;
+    Predicate<Person> studentCriteria = p -> p.getAge() <=17;
+    Predicate<Person> middleAgedCriteria = p -> p.getAge() >= 40 && p.getAge() <= 50;
 
-	public Predicate<Person> getPersonCriteriaByName(String criteriaName) {
-		Predicate<Person> personCriteria = null;
-		if (criteriaName != null) {
-			personCriteria = predicateStore.get(criteriaName);
-		} else {
-			throw new RuntimeException("Criteria can't be null");
-		}
+    searchMap.put("adultCriteria", adultCriteria);
+    searchMap.put("studentCriteria", studentCriteria);
+    searchMap.put("middleAgedCriteria", middleAgedCriteria);
 
-		if (personCriteria == null) {
-			throw new RuntimeException("Criteria not found");
-		}
-		return personCriteria;
-	}
+  }
+
+  public Predicate<Person> getCriteria(String PredicateName) {
+    Predicate<Person> target;
+
+    target = searchMap.get(PredicateName);
+
+    if (target == null) {
+
+      System.out.println("Search Criteria not found... ");
+      System.exit(1);
+    
+    }
+      
+    return target;
+
+  }
+
+  public static SearchCriteria getInstance() {
+    return new SearchCriteria();
+  }
 }
+

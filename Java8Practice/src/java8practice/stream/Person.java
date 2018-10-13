@@ -1,4 +1,4 @@
-package java8practice.lambdaexpression.inpractice;
+package java8practice.stream;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,10 +32,6 @@ public class Person {
 	@Override
 	public String toString() {
 		return ("[Name: " + this.name + ", Age: " + this.age + "]");
-	}
-	
-	public void printPerson(){
-		System.out.println(this.toString());
 	}
 	
 	public static List<Person> createPersonList(){
