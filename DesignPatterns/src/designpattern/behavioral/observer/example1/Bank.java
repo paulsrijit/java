@@ -3,7 +3,7 @@ package designpattern.behavioral.observer.example1;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Bank implements MySubject {
+public class Bank implements MySubject {//-
 
 	List<MyObserver> bankObservers;
 	int interestRate = -1;
