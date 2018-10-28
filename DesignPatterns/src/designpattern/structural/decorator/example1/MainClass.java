@@ -7,8 +7,7 @@ public class MainClass {
 		circle.draw();
 		
 		Shape triangle = new LineStyleDecorator(new ColorDecorator(new Triangle(), Color.RED), LineStyle.DOT);
-		triangle.draw();
-        
+		triangle.draw();        
 	}
 
 }
