@@ -1,5 +1,5 @@
 package designpattern.behavioral.iterator.example1;
 
-public interface Container {
+public interface Container {//
 	MyIterator getIterator();
 }

@@ -1,6 +1,6 @@
 package designpattern.behavioral.iterator.example1;
 
-public class MainClass {
+public class MainClass {//
 
 	public static void main(String[] args) {
 		NameContainer container = new NameContainer();

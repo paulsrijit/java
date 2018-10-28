@@ -1,6 +1,6 @@
 package designpattern.behavioral.iterator.example1;
 
-public class NameContainer implements Container {
+public class NameContainer implements Container {//
 
 	// private MyIterator iterator;
 	private String[] names;
