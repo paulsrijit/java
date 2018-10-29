@@ -5,16 +5,16 @@ package designpattern.behavioral.command.example1;
 public class MainClass {
 
 	public static void main(String[] args) {
-		Light light = new Light();
-		Command onCommand = new LightsOnCommand(light);
-		Command offCommand = new LightsOffCommand(light);
+		Light receiver = new Light();
+		Command concreteOnCommand = new LightsOnCommand(receiver);
+		Command concreteOffCommand = new LightsOffCommand(receiver);
 		
-		RemoteControl remote = new RemoteControl();
-		remote.setCommand(onCommand);
-		remote.pressButton();
+		RemoteControl invoker = new RemoteControl();
+		invoker.setCommand(concreteOnCommand);
+		invoker.pressButton();
 		
-		remote.setCommand(offCommand);
-		remote.pressButton();
+		invoker.setCommand(concreteOffCommand);
+		invoker.pressButton();
 	}
 
 }
