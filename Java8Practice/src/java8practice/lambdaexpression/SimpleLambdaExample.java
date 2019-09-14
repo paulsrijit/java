@@ -2,7 +2,7 @@ package java8practice.lambdaexpression;
 
 public class SimpleLambdaExample {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {//tst
 		NumericTest square = (n) -> (n*n);		
 		System.out.println(square.operate(9));
 		
